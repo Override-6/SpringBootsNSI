@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'scala'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '1.4.2.RELEASE'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.4.2.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-websocket', version: '5.2.2.RELEASE'
+    implementation group: 'org.springframework', name: 'spring-messaging', version: '5.2.2.RELEASE'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.2'
+
+    implementation group: 'org.scala-lang', name: 'scala-library', version: '2.13.4'
+
+}
