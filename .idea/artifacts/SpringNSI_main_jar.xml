@@ -1,0 +1,44 @@
+<component name="ArtifactManager">
+  <artifact name="SpringNSI.main:jar">
+    <output-path>$USER_HOME$/Desktop/Dev/NSI/SiteOral</output-path>
+    <root id="root">
+      <element id="archive" name="Launcher.jar">
+        <element id="module-output" name="SpringNSI.main" />
+      </element>
+      <element id="library" level="project" name="Gradle: org.springframework:spring-messaging:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-websocket:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.1.7" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: javax.validation:validation-api:1.1.0.Final" />
+      <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.17" />
+      <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.4.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.3.4.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:1.4.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.hibernate:hibernate-validator:5.2.4.Final" />
+      <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot:1.4.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.21" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.10.2" />
+      <element id="library" level="project" name="Gradle: org.scala-lang:scala-library:2.13.4" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.4.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.21" />
+      <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.6" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.2.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.10.2" />
+      <element id="library" level="project" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.4.2.RELEASE" />
+      <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.21" />
+      <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.1.0" />
+      <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.1.7" />
+      <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:8.5.6" />
+      <element id="library" level="project" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:8.5.6" />
+      <element id="library" level="project" name="Gradle: org.jboss.logging:jboss-logging:3.2.1.Final" />
+      <element id="library" level="project" name="Gradle: org.slf4j:jul-to-slf4j:1.7.21" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.10.2" />
+      <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.2.2.RELEASE" />
+    </root>
+  </artifact>
+</component>
