@@ -4,8 +4,21 @@
     <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
     <script src="/dependencies/Stomp.js"></script>
     <script src="/js/remote-redirect.js"></script>
+    <style>
+        .flexBox {
+            display: flex;
+            align-items: stretch;
+            flex-direction: row;
+            align-content: stretch;
+        }
+        button {
+            width: 100%
+        }
+
+    </style>
 </head>
-<body onload="connect()">
-<button onclick="sendRedirect()">Click here to redirect other clients</button>
+<body onload="connect(); markAsRedirector()" class="flexBox">
+    <button onclick="sendNextPage()">Click here to redirect next page</button>
+    <button onclick="sendLastPage()">Click here to redirect previous page</button>
 </body>
 </html>

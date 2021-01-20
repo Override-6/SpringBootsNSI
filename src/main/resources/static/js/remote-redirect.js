@@ -1,22 +1,23 @@
-var stompClient = null;
+var stompClient = null
+var isRedirector = false
+var currentPageNumber = 0
 
-function setConnected(connected) {
-    document.getElementById('connect').disabled = connected;
-    document.getElementById('disconnect').disabled = !connected;
-    document.getElementById('conversationDiv').style.visibility
-      = connected ? 'visible' : 'hidden';
-    document.getElementById('response').innerHTML = '';
+function markAsRedirector(){
+    isRedirector = true
 }
 
 function connect() {
-    var socket = new SockJS('/chat');
+    var socket = new SockJS('/display');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function(frame) {
-        setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/redirect-messaging', function(newLink) {
-            makeRedirect(JSON.parse(newLink.body));
-        });
+        if (!isRedirector) {
+            stompClient.subscribe('/display', function(newLink) {
+                var object = JSON.parse(newLink.body)
+                currentPageNumber = object.index
+                updatePage();
+            });
+        }
     });
 }
 
@@ -28,12 +29,20 @@ function disconnect() {
     console.log("Disconnected");
 }
 
-function sendRedirect() {
-    var TEST_URL = "https://www.youtube.com"
-    stompClient.send("/redirect-messaging", {},
-      JSON.stringify({'link':TEST_URL}));
+function sendNextPage() {
+
+    stompClient.send("/display", {},
+       JSON.stringify({'index':++currentPageNumber}));
 }
 
-function makeRedirect(redirection) {
-    window.location.href = redirection.link
+function sendLastPage() {
+    if (currentPageNumber <= 0)
+        currentPageNumber = 1
+
+    stompClient.send("/display", {},
+       JSON.stringify({'index':--currentPageNumber}));
+}
+
+function updatePage() {
+    window.location.href = '/pages/display/page' + currentPageNumber + '.html'
 }

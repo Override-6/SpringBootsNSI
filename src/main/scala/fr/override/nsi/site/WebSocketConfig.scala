@@ -9,13 +9,13 @@ import org.springframework.web.socket.config.annotation.{EnableWebSocketMessageB
 class WebSocketConfig extends WebSocketMessageBrokerConfigurer  {
 
     override def configureMessageBroker(registry: MessageBrokerRegistry): Unit = {
-        registry.enableSimpleBroker("/redirect-messaging")
+        registry.enableSimpleBroker("/display")
         registry.setApplicationDestinationPrefixes()
     }
 
     override def registerStompEndpoints(registry: StompEndpointRegistry): Unit = {
-        registry.addEndpoint("/redirect-messaging") //Not mandatory
-        registry.addEndpoint("/redirect-messaging").withSockJS()
+        registry.addEndpoint("/display") //Not mandatory
+        registry.addEndpoint("/display").withSockJS()
     }
 
 }
