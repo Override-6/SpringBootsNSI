@@ -1,6 +1,5 @@
 var stompClient = null
 var isRedirector = false
-var currentPageNumber = 0
 
 function markAsRedirector(){
     isRedirector = true
@@ -14,8 +13,8 @@ function connect() {
         if (!isRedirector) {
             stompClient.subscribe('/display', function(newLink) {
                 var object = JSON.parse(newLink.body)
-                currentPageNumber = object.index
-                updatePage();
+                page = object.page
+                updatePage(page);
             });
         }
     });
@@ -29,20 +28,12 @@ function disconnect() {
     console.log("Disconnected");
 }
 
-function sendNextPage() {
+function sendPage(page) {
 
     stompClient.send("/display", {},
-       JSON.stringify({'index':++currentPageNumber}));
+       JSON.stringify({'page':page}));
 }
 
-function sendLastPage() {
-    if (currentPageNumber <= 0)
-        currentPageNumber = 1
-
-    stompClient.send("/display", {},
-       JSON.stringify({'index':--currentPageNumber}));
-}
-
-function updatePage() {
-    window.location.href = '/pages/display/page' + currentPageNumber + '.html'
+function updatePage(page) {
+    window.location.href = '/pages/display/page' + page + '.html'
 }

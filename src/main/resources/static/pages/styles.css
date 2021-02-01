@@ -1,0 +1,40 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: lightgray; /*Default color*/
+}
+.flexBox {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#content {
+    position: relative;
+}
+
+#text {
+    position: absolute
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27');
+}
+
+#background {
+     align-self: flex-start;
+     filter: blur(1px);
+     -webkit-filter: blur(1px);
+
+     animation: 120s cubic-bezier(0.2, 0.03, 0.77, 0.99) 0s infinite alternate move
+}
