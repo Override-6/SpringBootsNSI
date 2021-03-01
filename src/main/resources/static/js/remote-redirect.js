@@ -29,7 +29,6 @@ function disconnect() {
 }
 
 function sendPage(page) {
-
     stompClient.send("/display", {},
        JSON.stringify({'page':page}));
 }

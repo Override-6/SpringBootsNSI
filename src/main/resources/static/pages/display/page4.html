@@ -17,17 +17,17 @@
             }
         }
 
-
-
-
-
-
-
     </style>
 </head>
 <body onload="connect()" class="flexBox">
 <div class="flexBox" id="content">
     <img src="/images/background-5.png" alt="Snow" id="background">
+    <div class="flexBox" id="contents_div">
+        <div class="flexBox" id="previous_div">
+            <button id="previous"><pre>  <  </pre></button>
+        </div>
+        <button id="contents" onclick="window.location.href = /display/"><pre> Cliquez ici pour revenir au sommaire </pre></button>
+    </div>
     <div class="flexBox" id="text">
         <h1>Différentes langages pour différentes utilisations</h1>
 
@@ -59,9 +59,10 @@
             <span style="color: #f540ff">JDK (Java Developement Kit)</span>, appelée
             <span style="color: #f540ff">awt</span>, pour <span style="color: #f540ff">"Abstract Window Toolkit"</span>,
             et qui permet d’effectuer des actions de base sur les <span
-                style="color: #fc6f03">systèmes graphiques</span>.
+                style="color: #fc6f03">systèmes graphiques</span>.<br>
             Comme ouvrir une fenêtre, y afficher des éléments ou des pixels, gestions d’events de base etc.
-            <span style="color: #f540ff">JavaFX</span>, est une surcouche d'<span style="color: #f540ff">AWT</span>, qui
+            <span style="color: #f540ff">JavaFX</span>, est une surcouche d'<span style="color: #f540ff">AWT</span>,<br>
+            qui
             permet d’effectuer bien plus de choses, comme afficher une vidéo, gestion plus approfondie
             des évènements etc...
         </p>
