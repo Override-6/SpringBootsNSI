@@ -6,46 +6,50 @@
     <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
     <script src="/js/dependencies/Stomp.js"></script>
     <script src="/js/remote-redirect.js"></script>
+    <link rel="stylesheet" href="/pages/styles.css">
     <style>
-      * {
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-            width: 100%;
-      }
-      p {
-            font-size: 20px;
-      }
-      .flexBox {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-      }
-
-      img {
-        width: 50%;
-        height: 50%;
-      }
-      @font-face {
-      font-family: Roboto;
-      src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27');
-      }
-
+        @keyframes move {
+            from {
+                margin-top: 230%;
+            }
+            to {
+                margin-top: -230%;
+            }
+        }
     </style>
 </head>
 <body onload="connect()" class="flexBox">
-    <h1>Languages de Bas niveau</h1>
+<div class="flexBox" id="content">
+    <img src="/images/background-3.png" id="background"></div>
+<div class="flexBox" id="contents_div">
+    <div class="flexBox" id="previous_div" onclick="alert('test')">
+        <button id="previous"><pre>  <  </pre></button>
+    </div>
+    <button id="contents" onclick="console.log('test')"><pre> Cliquez ici pour revenir au sommaire </pre></button>
+    <div class="flexBox" id="next_div" onclick="alert('test')">
+        <button id="next"><pre>  >  </pre></button>
+    </div>
+</div>
+<div id="text">
+    <h1>Languages de <span style="color: #008cff">Bas niveau</span></h1>
     <p>
-        Un langage de programmation de bas niveau est un langage qui se rapproche de la machine,
-        Son fonctionnement est trés simple à éxécuter du point de vue de la machine, il permet d'effectuer des appels
-        Systèmes, ou sur la machine physique, et trés peu de choses, voir aucune choses sont automatisées (par exemple la gestion de la mémoire).
+        Un <span style="color: #fc6f03">langage</span> de <span style="color: #fc6f03">programmation</span> de <span
+            style="color: #008cff">bas niveau</span> est un langage qui se rapproche de la machine,
+        Son fonctionnement est trés <span style="color: #2cde5c">simple à éxécuter</span> du point de vue de la machine,
+        il permet d'effectuer des <span style="color: #fc6f03">appels
+        Systèmes</span>, ou sur la <span style="color: #008cff">machine physique</span>, et trés peu de choses, voir
+        aucune choses sont automatisées (par exemple la gestion de la mémoire).
     </p>
     <p>
-        Prennons le cas du langage Assembleur, qui est le langage de plus bas niveau qui représente le langage machine (le binaire)
-        Ce langage est de si bas niveau, qu'il est le seul langage qu'un processeur peut executer de lui-même. Ce qui fait que
-        l'assembleur doit se spécifier à chaque architecture de processeur. (x32, x64, x86)
+        Prennons le cas du <span style="color: #fc6f03">langage Assembleur</span>, qui est le langage de plus bas niveau
+        qui représente le langage machine (le <span style="color: #fc6f03">binaire</span>)
+        Ce langage est tellement <span style="color: #008cff">primitif</span>, qu'il est le seul langage qu'un
+        processeur peut executer de lui-même. Ce qui fait que
+        <span style="color: #fc6f03">l'assembleur</span> doit se spécifier à chaque architecture de processeur. <span
+            style="color: #2cde5c">(x32, x64, x86)</span>
     </p>
     <img src="/images/c_assembleur1.png"/>
+</div>
+</div>
 </body>
 </html>

@@ -12,6 +12,7 @@ class RedirectsController {
     * */
     @RequestMapping(Array("/display"))
     def pageDisplay(): ModelAndView = {
+        println("Mais gros respecte toi nan ?")
         new ModelAndView("/pages/display/page0.html")
     }
 

@@ -6,29 +6,41 @@
     <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
     <script src="/js/dependencies/Stomp.js"></script>
     <script src="/js/remote-redirect.js"></script>
+
+    <link rel="stylesheet" href="/pages/styles.css">
     <style>
-      * {
-            font-family: 'Roboto', sans-serif;
-            text-align: center
-            width: 100%
-      }
-      .flexBox {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-      }
-      @font-face {
-      font-family: Roboto;
-      src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27');
-      }
+        @keyframes move {
+            from {
+                margin-top: 180%;
+            }
+            to {
+                margin-top: -180%;
+            }
+        }
+
 
     </style>
+
 </head>
 <body onload="connect()" class="flexBox">
-<p> Batista Maxime - COSSON Benoit</p>
-<h2>Présentation orale NSI</h2>
-<h1> Les différents langages de programation</h1>
+<div class="flexBox" id="content">
+    <img src="/images/background-4.png" alt="Snow" id="background">
+    <div id="text">
+        <u> Batista Maxime - COSSON Benoit</u>
+        <h2>Présentation orale <span style="color: #fc6f03">NSI</span></h2>
+        <h1>Les différents <span style="color: #fc6f03">langages</span> de <span
+                style="color: #fc6f03">programmation</span></h1>
+
+        <p>
+            Sommaire :
+        <ul>
+            <li><a href="/pages/display/page1.html">Les languages de bas niveau</a></li>
+            <li><a href="/pages/display/page2.html">Les languages de haut niveau</a></li>
+            <li><a href="/pages/display/page3.html">Exemple de language de haut niveau : le Java</a></li>
+            <li><a href="/pages/display/page4.html">Différents cas d'utilisation des languages</a></li>
+        </ul>
+        </p>
+    </div>
+</div>
 </body>
 </html>
