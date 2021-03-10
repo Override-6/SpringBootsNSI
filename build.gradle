@@ -18,6 +18,9 @@ jar {
     manifest {
         attributes("Main-Class": "fr.override.nsi.site.SpringApp")
     }
+    from {
+        configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 sourceSets {
