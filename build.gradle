@@ -12,8 +12,18 @@ repositories {
 
 task stage(dependsOn: ['build', 'clean']) {
     println("EXECUTING STAGE RN")
-    build.mustRunAfter clean
+    dependsOn clean, war
 }
+war.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)
 
 jar {
     println("zqDQZDdzzdzqdqzd")
@@ -62,6 +72,7 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-messaging', version: '5.2.2.RELEASE'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.2'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.2'
+    implementation 'com.github.jsimone:webapp-runner:8.5.11.3'
 
     implementation group: 'org.scala-lang', name: 'scala-library', version: '2.13.4'
 
