@@ -1,0 +1,75 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: lightgray; /*Default color*/
+}
+.flexBox {
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+#content {
+    position: relative;
+}
+
+#text, #previous_div, #contents_div, #next_div {
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+}
+
+#previous_div, #contents_div, #next_div {
+    flex-direction: row;
+    cursor: pointer;
+    width: 98vw;
+}
+
+#contents_div {
+    top: 15px;
+}
+
+#text {
+    top: 50px;
+}
+
+#previous, #contents, #next {
+    border: none;
+    color: #ff214e;
+    background: #4885ED;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#previous_div {
+    justify-content: flex-start;
+}
+
+#next_div {
+    justify-content: flex-end;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    /*overflow: hidden;*/
+
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap%27');
+}
+
+#background {
+     align-self: flex-start;
+     filter: blur(1px);
+     -webkit-filter: blur(1px);
+     /*transform: translateX(1920px);*/
+
+     animation: 120s cubic-bezier(0.2, 0.03, 0.77, 0.99) 0s infinite alternate move
+}
