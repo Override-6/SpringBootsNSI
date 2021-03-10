@@ -11,10 +11,12 @@ repositories {
 }
 
 task stage(dependsOn: ['build', 'clean']) {
-   // build.mustRunAfter clean
+    println("EXECUTING STAGE RN")
+    build.mustRunAfter clean
 }
 
 jar {
+    println("zqDQZDdzzdzqdqzd")
     manifest {
         attributes("Main-Class": "fr.override.nsi.site.SpringApp")
     }
