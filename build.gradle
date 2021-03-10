@@ -10,6 +10,10 @@ repositories {
     mavenCentral()
 }
 
+task stage(dependsOn: ['build', 'clean']) {
+    build.mustRunAfter clean
+}
+
 sourceSets {
     main {
         java {
@@ -20,6 +24,8 @@ sourceSets {
         }
     }
 }
+
+
 
 dependencies {
 
