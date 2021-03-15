@@ -1,7 +1,7 @@
 * {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    color: lightgray; /*Default color*/
+    color: white; /*Default color*/
 }
 .flexBox {
     display: flex;
