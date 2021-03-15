@@ -23,34 +23,12 @@
     width: 100vw;
 }
 
-/*#previous_div, #contents_div, #next_div {
-    flex-direction: row;
-    cursor: pointer;
-    width: 98vw;
-}*/
-/*
-#contents_div {
-    top: 15px;
-}
-
-#text {
-    top: 50px;
-}*/
-
-#previous, #contents, #next {
+#contents {
     border: none;
     color: #ff214e;
     background: #4885ED;
     border-radius: 25px;
     cursor: pointer;
-}
-
-#previous_div {
-    justify-content: flex-start;
-}
-
-#next_div {
-    justify-content: flex-end;
 }
 
 html, body {
